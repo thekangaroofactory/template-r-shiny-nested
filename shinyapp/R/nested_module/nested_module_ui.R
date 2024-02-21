@@ -10,6 +10,6 @@ nested_module_UI <- function(id) {
   # namespace
   ns <- NS(id)
   
-  textOutput(ns("nested_module_output"))
+  wellPanel(textOutput(ns("output_nested")))
   
 }

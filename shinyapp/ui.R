@@ -34,11 +34,11 @@ body <- dashboardBody(
             # -- module output
             h3("Module"),
             p("This is an output from the module:"),
-            module_UI("module_id"),
+            module_UI("wrapper"),
             
             h3("Nested module"),
             p("This is an output from the nested module:"),
-            nested_module_UI(c("module_id", "nested_module_id")))
+            nested_module_UI("wrapper-nested"))
     
   ) # tabItems
 ) # dashboardBody

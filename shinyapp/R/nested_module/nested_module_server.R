@@ -4,18 +4,19 @@
 # Module Server logic
 # ------------------------------------------------------------------------------
 
-nested_module_server <- function(id, r, path) {
+nested_module_server <- function(id) {
   moduleServer(id, function(input, output, session) {
 
+    # -- get namespace
+    ns <- session$ns
     
     # --------------------------------------------------------------------------
     # Outputs
     # --------------------------------------------------------------------------
     
     # -- sample_output
-    output$nested_module_output <- renderText("From the nested module")
+    output$output_nested <- renderText(paste("From the", id,"module"))
     
-
   })
 }
 
